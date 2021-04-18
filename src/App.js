@@ -1,5 +1,5 @@
 import "./App.css";
-import { FiUsers, GiGasPump, IoSpeedometerOutline } from "react-icons/all";
+// import { FiUsers, GiGasPump, IoSpeedometerOutline } from "react-icons/all";
 import Nav from "./components/Nav";
 import SearchDestination from "./components/SearchDestination";
 import Sidebar from "./container/Sidebar";
