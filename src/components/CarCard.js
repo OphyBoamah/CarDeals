@@ -60,17 +60,20 @@ import { FiUsers, GiGasPump, IoSpeedometerOutline } from "react-icons/all";
 //   },
 // ];
 
-function CarCard(props) {
+function CarCard({ name, type, persons, fuel, meter, price, img }) {
   return (
     <div className="card">
       <div className="card--image">
-        <img src={require("../assets/tesla.png").default} alt="Tesla model 3" />
+        <img
+          src={require(`../assets/images/${img}`).default}
+          alt="Tesla model 3"
+        />
       </div>
       <div className="card--body">
         <div className="title-wrapper">
           <div className="body-title">
-            <h4>Standard</h4>
-            <p>Tesla Model S</p>
+            <h4>{type}</h4>
+            <p>{name}</p>
           </div>
           <div className="body-tag">Special Deal</div>
         </div>
@@ -81,23 +84,23 @@ function CarCard(props) {
           <div className="features-wrapper">
             <div className="features-items features-users">
               <FiUsers color="#747c84" />
-              <p>5</p>
+              <p>{persons}</p>
             </div>
             <div className="features-items features-pump">
               <GiGasPump color="#747c84" />
-              <p>Electric</p>
+              <p>{fuel}</p>
             </div>
           </div>
           <div className="features-items features-miles">
             <IoSpeedometerOutline color="#747c84" />
-            <p>Unlimited Mileage</p>
+            <p>{meter}</p>
           </div>
         </div>
       </div>
 
       <div className="card--footer">
         <div className="footer-price">
-          <h3>$ 124.00</h3>
+          <h3>$ {price}</h3>
           <p>per day</p>
         </div>
         <div className="footer-button">

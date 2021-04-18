@@ -7,6 +7,7 @@ import CarCard from "./components/CarCard";
 
 const cars = [
   {
+    id: 1,
     name: "Tesla Model S",
     type: "Standard",
     persons: 5,
@@ -17,6 +18,7 @@ const cars = [
     deal: "Special deal",
   },
   {
+    id: 2,
     name: "Tesla Model Y",
     type: "Compact",
     persons: 5,
@@ -26,6 +28,7 @@ const cars = [
     img: "img-2.png",
   },
   {
+    id: 3,
     name: "Tesla Model X",
     type: "Mini",
     persons: 5,
@@ -35,6 +38,7 @@ const cars = [
     img: "img-3.png",
   },
   {
+    id: 4,
     name: "Tesla Model 3",
     type: "Standard",
     persons: 5,
@@ -44,6 +48,7 @@ const cars = [
     img: "img-4.png",
   },
   {
+    id: 5,
     name: "Tesla Model S",
     type: "Compact",
     persons: 5,
@@ -54,6 +59,7 @@ const cars = [
     deal: "Special deal",
   },
   {
+    id: 6,
     name: "Tesla Model X",
     type: "Standard",
     persons: 5,
@@ -64,7 +70,7 @@ const cars = [
   },
 ];
 
-function App() {
+function App({ name, type, persons, fuel, meter, price, img }) {
   return (
     <div>
       <Nav />
@@ -90,7 +96,7 @@ function App() {
             {/*{cars.map(()=> )}*/}
             {cars.map((car) => (
               <CarCard
-                key={id}
+                key={car.id}
                 name={car.name}
                 type={car.type}
                 persons={car.persons}
